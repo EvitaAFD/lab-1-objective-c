@@ -1,5 +1,5 @@
 //
-//  NSString+String.h
+//  PersonQueue.h
 //  lab-1-objective-c
 //
 //  Created by Eve Denison on 4/17/17.
@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
-@interface NSString (String)
+@protocol PersonQueue <NSObject>
 
--(NSString *)reversedString;
--(NSArray *)toArray;
+@required
+-(void)enqueue:(Person *)person;
+-(Person *)dequeue;
+
+@optional
+-(int)count
+
 
 @end

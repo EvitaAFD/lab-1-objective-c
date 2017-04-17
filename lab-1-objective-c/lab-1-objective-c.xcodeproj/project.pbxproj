@@ -35,6 +35,7 @@
 		50AB94FE1EA572B500BACAE6 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		50AB95001EA572C900BACAE6 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		50AB95011EA572C900BACAE6 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		50AB95031EA578F300BACAE6 /* PersonQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonQueue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 				50AB94FE1EA572B500BACAE6 /* Person.m */,
 				50AB95001EA572C900BACAE6 /* Employee.h */,
 				50AB95011EA572C900BACAE6 /* Employee.m */,
+				50AB95031EA578F300BACAE6 /* PersonQueue.h */,
 				50AB94E91EA561F200BACAE6 /* Main.storyboard */,
 				50AB94EC1EA561F200BACAE6 /* Assets.xcassets */,
 				50AB94EE1EA561F200BACAE6 /* LaunchScreen.storyboard */,

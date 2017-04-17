@@ -19,6 +19,9 @@
     [super viewDidLoad];
     
     NSString *testString = @"Dogs are the best ever";
+    NSArray *sampleArray = [testString toArray];
+    NSLog(@"%@", sampleArray);
+    
     [testString reversedString];
 
 }
