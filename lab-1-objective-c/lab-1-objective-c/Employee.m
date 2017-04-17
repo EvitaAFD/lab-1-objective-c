@@ -10,4 +10,43 @@
 
 @implementation Employee
 
+NSNumber *_employeeNumber;
+
+//getter
+-(NSNumber *)employeeNumber {
+    return _employeeNumber;
+
+}
+
+//setter
+-(void)setEmployeeNumber:(NSNumber *)employeeNumber {
+    _employeeNumber = employeeNumber;
+}
+
+NSNumber *_yearsEmployed;
+
+//getter
+-(NSNumber *)yearsEmployed {
+    return _yearsEmployed;
+}
+
+//setter
+
+-(void)setYearsEmployed:(NSNumber *)yearsEmployed {
+    _yearsEmployed = yearsEmployed;
+}
+
+NSString *_managerName;
+
+//getter
+-(NSString *)managerName {
+    return _managerName;
+}
+
+//setter
+-(void)setManagerName:(NSString *)managerName {
+    _managerName = managerName;
+}
+
+
 @end
