@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50374F181EA6878100D4D93A /* EmployeeDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 50374F171EA6878100D4D93A /* EmployeeDatabase.m */; };
 		50AB94E21EA561F200BACAE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AB94E11EA561F200BACAE6 /* main.m */; };
 		50AB94E51EA561F200BACAE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AB94E41EA561F200BACAE6 /* AppDelegate.m */; };
 		50AB94E81EA561F200BACAE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AB94E71EA561F200BACAE6 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50374F161EA6878000D4D93A /* EmployeeDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDatabase.h; sourceTree = "<group>"; };
+		50374F171EA6878100D4D93A /* EmployeeDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDatabase.m; sourceTree = "<group>"; };
 		50AB94DD1EA561F200BACAE6 /* lab-1-objective-c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lab-1-objective-c.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AB94E11EA561F200BACAE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50AB94E31EA561F200BACAE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				50AB94E41EA561F200BACAE6 /* AppDelegate.m */,
 				50AB94E61EA561F200BACAE6 /* ViewController.h */,
 				50AB94E71EA561F200BACAE6 /* ViewController.m */,
+				50374F161EA6878000D4D93A /* EmployeeDatabase.h */,
+				50374F171EA6878100D4D93A /* EmployeeDatabase.m */,
 				50AB94F71EA5626600BACAE6 /* NSString+String.h */,
 				50AB94F81EA5626600BACAE6 /* NSString+String.m */,
 				50AB94FD1EA572B500BACAE6 /* Person.h */,
@@ -174,6 +179,7 @@
 				50AB95021EA572C900BACAE6 /* Employee.m in Sources */,
 				50AB94F91EA5626600BACAE6 /* NSString+String.m in Sources */,
 				50AB94E21EA561F200BACAE6 /* main.m in Sources */,
+				50374F181EA6878100D4D93A /* EmployeeDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +340,7 @@
 				50AB94F61EA561F200BACAE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
