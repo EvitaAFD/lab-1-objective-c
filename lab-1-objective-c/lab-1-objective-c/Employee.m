@@ -14,7 +14,8 @@
                         lastName:(NSString *)lastName
                              age:(NSNumber *)age
                    yearsEmployed:(NSNumber *)yearsEmployed
-                     managerName:(NSString *)managerName;{
+                     managerName:(NSString *)managerName
+                           email:(NSString *)email{
 
     self = [super initWithFirstName:firstName lastName:lastName andAge:age];
     
@@ -22,6 +23,7 @@
         _yearsEmployed = yearsEmployed;
         _managerName = managerName;
         _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
+        _email = email;
         
     }
     return self;
@@ -34,6 +36,7 @@
     employee.employeeNumber = self.employeeNumber;
     employee.managerName = self. managerName;
     employee.yearsEmployed = self.yearsEmployed;
+    employee.email = self.email;
     
     return employee;
 
@@ -77,5 +80,16 @@ NSString *_managerName;
     _managerName = managerName;
 }
 
+NSString *_email;
+
+//getter
+-(NSString *)email {
+    return _email;
+}
+
+//setter
+-(void)email:(NSString *)email{
+    _email = email;
+}
 
 @end
