@@ -11,7 +11,9 @@
 #import "EmployeeDatabase.h"
 #import "Employee.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *allEmployees;
 
 @end
 
@@ -22,13 +24,8 @@
     
     [[EmployeeDatabase shared] allEmployees];
     
-//    Employee *original = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Walraff" age:@30 yearsEmployed:@2 managerName:@"Brooke"];
-//    
-//    Employee *newInstructor = [original copy];
-//    
-//    newInstructor.firstName = @"Mike";
-//    
-//    NSLog(original.firstName);
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
     NSString *testString = @"Dogs are the best ever";
     NSArray *sampleArray = [testString toArray];
@@ -38,11 +35,28 @@
 
 }
 
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    }
+    
+    cell.textLabel.text = [_allEmployees[indexPath.row]firstName];
+    
+    return cell;
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.allEmployees.count;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+
 }
+
 
 
 @end
