@@ -20,8 +20,13 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    if ([_allEmployees count] == 0) {
+        _allEmployees = [[NSMutableArray alloc]init];
+    }
+    
     [super viewDidLoad];
     
+    Employee *employeeOne =
     [[EmployeeDatabase shared] allEmployees];
     
     self.tableView.delegate = self;
