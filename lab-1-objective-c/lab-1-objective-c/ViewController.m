@@ -24,6 +24,8 @@
     [super viewDidLoad];
 
     self.tableView.dataSource = self;
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reloadTableData) name:@"reloadData" object:nil];
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -42,10 +44,9 @@
     return [[EmployeeDatabase shared] count];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)reloadTableData{
 
+    [self.tableView reloadData];
 }
 
 
