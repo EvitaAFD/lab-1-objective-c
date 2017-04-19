@@ -69,8 +69,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbf-AU-fA7">
+                                <rect key="frame" x="31" y="98" width="99" height="23"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbY-xd-qHx">
-                                <rect key="frame" x="31" y="201" width="113" height="21"/>
+                                <rect key="frame" x="31" y="188" width="113" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="ETf-g6-9Pg"/>
                                     <constraint firstAttribute="height" constant="21" id="LKg-cN-Dkx"/>
@@ -79,12 +85,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyZ-lu-uCD">
-                                <rect key="frame" x="31" y="230" width="312" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed0-AK-czg">
                                 <rect key="frame" x="31" y="287" width="113" height="21"/>
                                 <constraints>
@@ -144,16 +144,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbf-AU-fA7">
-                                <rect key="frame" x="31" y="98" width="99" height="23"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyZ-lu-uCD">
+                                <rect key="frame" x="31" y="217" width="312" height="30"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.6525666048124138" green="0.84826717673219398" blue="0.71239991875532427" alpha="0.53034032534246578" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ed0-AK-czg" firstAttribute="top" secondItem="xyZ-lu-uCD" secondAttribute="bottom" constant="27" id="3OY-Cg-fto"/>
+                            <constraint firstItem="ed0-AK-czg" firstAttribute="top" secondItem="xyZ-lu-uCD" secondAttribute="bottom" constant="40" id="3OY-Cg-fto"/>
                             <constraint firstItem="6Uv-07-vAL" firstAttribute="top" secondItem="8hi-04-8rh" secondAttribute="bottom" constant="31" id="4Us-9j-oiI"/>
                             <constraint firstItem="0Ow-ZZ-mfw" firstAttribute="centerX" secondItem="Xe2-Xh-KhX" secondAttribute="centerX" id="4WX-Ri-kiC"/>
                             <constraint firstItem="rg0-YU-j2T" firstAttribute="leading" secondItem="8hi-04-8rh" secondAttribute="leading" id="8O7-UT-ugW"/>
