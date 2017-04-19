@@ -26,8 +26,18 @@
     
     [super viewDidLoad];
     
-    Employee *employeeOne =
-    [[EmployeeDatabase shared] allEmployees];
+    Employee *employeeOne = [[Employee alloc]initWithFirstName:@"Dave" lastName:@"Ipsum" age:@35 yearsEmployed:@12 managerName:@"Spirit Animal Dan" email:@"Dipsum@dumb.com"];
+    Employee *employeeTwo = [[Employee alloc]initWithFirstName:@"Tina" lastName:@"Llama" age:@73 yearsEmployed:@1 managerName:@"Alpaca Joe" email:@"Llama@alpaca.com"];
+    Employee *employeeThree = [[Employee alloc]initWithFirstName:@"Steve" lastName:@"Stevo" age:@12 yearsEmployed:@3 managerName:@"Daveo" email:@"steveo@dogs.com"];
+    
+    [[EmployeeDatabase shared]add:employeeOne];
+    [[EmployeeDatabase shared]add:employeeTwo];
+    [[EmployeeDatabase shared]add:employeeThree];
+    
+    [[EmployeeDatabase shared]remove:employeeTwo];
+                               
+    [_allEmployees addObjectsFromArray:[[EmployeeDatabase shared] allEmployees]];
+    
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

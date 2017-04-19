@@ -48,10 +48,12 @@
         _employees = [[NSMutableArray alloc]init];
     }
     [_employees addObject:employee];
+    NSLog(@"%@", [employee firstName]);
 }
 
 -(void)remove:(Employee *)employee {
     [_employees removeObject:employee];
+    NSLog(@"%@", [employee firstName]);
 }
 
 -(void)removeEmployeeAtIndex:(int)index {
