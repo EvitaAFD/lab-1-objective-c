@@ -13,41 +13,17 @@
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray *allEmployees;
+
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-    if ([_allEmployees count] == 0) {
-        _allEmployees = [[NSMutableArray alloc]init];
-    }
-    
+  
     [super viewDidLoad];
-    
-    Employee *employeeOne = [[Employee alloc]initWithFirstName:@"Dave" lastName:@"Ipsum" age:@35 yearsEmployed:@12 managerName:@"Spirit Animal Dan" email:@"Dipsum@dumb.com"];
-    Employee *employeeTwo = [[Employee alloc]initWithFirstName:@"Tina" lastName:@"Llama" age:@73 yearsEmployed:@1 managerName:@"Alpaca Joe" email:@"Llama@alpaca.com"];
-    Employee *employeeThree = [[Employee alloc]initWithFirstName:@"Steve" lastName:@"Stevo" age:@12 yearsEmployed:@3 managerName:@"Daveo" email:@"steveo@dogs.com"];
-    
-    [[EmployeeDatabase shared]add:employeeOne];
-    [[EmployeeDatabase shared]add:employeeTwo];
-    [[EmployeeDatabase shared]add:employeeThree];
-    
-    [[EmployeeDatabase shared]remove:employeeTwo];
-                               
-    [_allEmployees addObjectsFromArray:[[EmployeeDatabase shared] allEmployees]];
-    
-    
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    
-    NSString *testString = @"Dogs are the best ever";
-    NSArray *sampleArray = [testString toArray];
-    NSLog(@"%@", sampleArray);
-    
-    [testString reversedString];
 
+    self.tableView.dataSource = self;
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -57,13 +33,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     
-    cell.textLabel.text = [_allEmployees[indexPath.row]firstName];
+    cell.textLabel.text = [[[EmployeeDatabase shared] employeeAtIndex:(int)indexPath.row]firstName];
     
     return cell;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.allEmployees.count;
+    return [[EmployeeDatabase shared] count];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -42,6 +42,37 @@
 
 }
 
+//write to disk
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    
+    if (self) {
+        self.firstName = [aDecoder decodeObjectForKey:@"firstName"];
+        self.lastName = [aDecoder decodeObjectForKey:@"lastName"];
+        self.age = [aDecoder decodeObjectForKey:@"age"];
+        
+        self.yearsEmployed = [aDecoder decodeObjectForKey:@"yearsEmployed"];
+        self.managerName = [aDecoder decodeObjectForKey:@"managerName"];
+        self.employeeNumber = [aDecoder decodeObjectForKey:@"employeeNumber"];
+        self.email = [aDecoder decodeObjectForKey:@"email"];
+    }
+    return self;
+}
+
+//unarchive from disk
+-(void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.firstName forKey:@"firstName"];
+    [aCoder encodeObject:self.lastName forKey:@"lastName"];
+    [aCoder encodeObject:self.age forKey:@"age"];
+    
+    [aCoder encodeObject:self.yearsEmployed forKey:@"yearsEmployed"];
+    [aCoder encodeObject:self.managerName forKey:@"managerName"];
+    [aCoder encodeObject:self.employeeNumber forKey:@"employeeNumber"];
+    [aCoder encodeObject:self.email forKey:@"email"];
+    
+}
+
+
 NSNumber *_employeeNumber;
 
 //getter
