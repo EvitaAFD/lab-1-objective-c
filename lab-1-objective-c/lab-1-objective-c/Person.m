@@ -52,7 +52,6 @@
 }
 
 
-
 -(id)copyWithZone:(NSZone *)zone{
     Person *person = [[[self class] alloc]init];
     

@@ -72,55 +72,41 @@
     
 }
 
-
-NSNumber *_employeeNumber;
-
-//getter
--(NSNumber *)employeeNumber {
-    return _employeeNumber;
-
-}
-
 //setter
--(void)setEmployeeNumber:(NSNumber *)employeeNumber {
-    _employeeNumber = employeeNumber;
-}
-
-NSNumber *_yearsEmployed;
-
-//getter
--(NSNumber *)yearsEmployed {
-    return _yearsEmployed;
-}
-
-//setter
-
 -(void)setYearsEmployed:(NSNumber *)yearsEmployed {
-    _yearsEmployed = yearsEmployed;
+    if (_yearsEmployed != yearsEmployed) {
+        [yearsEmployed retain];
+        [_yearsEmployed release];
+        
+        _yearsEmployed = yearsEmployed;
+    }
 }
 
-NSString *_managerName;
-
-//getter
--(NSString *)managerName {
-    return _managerName;
+-(void)setManagerName:(NSString *)managerName {\
+    if (_managerName != managerName) {
+        [managerName retain];
+        [_managerName release];
+    
+        _managerName = managerName;
+    }
 }
 
-//setter
--(void)setManagerName:(NSString *)managerName {
-    _managerName = managerName;
+-(void)setEmployeeNumber:(NSNumber *)employeeNumber{
+    if (_employeeNumber != employeeNumber){
+        [employeeNumber retain];
+        [_employeeNumber release];
+        
+        _employeeNumber = employeeNumber;
+    }
 }
 
-NSString *_email;
-
-//getter
--(NSString *)email {
-    return _email;
-}
-
-//setter
 -(void)email:(NSString *)email{
-    _email = email;
+    if (_email != email) {
+        [email retain];
+        [_email release];
+        
+        _email = email;
+    }
 }
 
 @end
