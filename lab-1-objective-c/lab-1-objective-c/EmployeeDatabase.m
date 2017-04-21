@@ -37,6 +37,8 @@
     if (self) {
         _employees = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfURL:self.archiveURL]];
         
+        NSLog(@"class: %@", [_employees class]);
+        
         if (!_employees) {
         _employees = [[NSMutableArray alloc]init];
         }

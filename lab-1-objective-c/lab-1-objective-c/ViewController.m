@@ -26,6 +26,7 @@
     self.tableView.dataSource = self;
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reloadTableData) name:@"reloadData" object:nil];
+    NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
