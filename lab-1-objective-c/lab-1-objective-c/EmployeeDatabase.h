@@ -27,4 +27,6 @@
 
 -(void)removeAllEmployees;
 
+-(void)save;
+
 @end

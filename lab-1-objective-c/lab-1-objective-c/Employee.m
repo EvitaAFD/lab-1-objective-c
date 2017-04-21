@@ -82,15 +82,6 @@
     }
 }
 
--(void)setManagerName:(NSString *)managerName {\
-    if (_managerName != managerName) {
-        [managerName retain];
-        [_managerName release];
-    
-        _managerName = managerName;
-    }
-}
-
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber{
     if (_employeeNumber != employeeNumber){
         [employeeNumber retain];
